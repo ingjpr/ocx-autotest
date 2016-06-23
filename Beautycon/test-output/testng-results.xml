@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="7" passed="6">
+  <reporter-output>
+    <line>
+      <![CDATA[Rob062216173333@mailinator.com-grqwe123]]>
+    </line>
+    <line>
+      <![CDATA[371449635398431-10/2034]]>
+    </line>
+    <line>
+      <![CDATA[fnxAGCCBGBHDDDD-O'connor xAGCCBGBHDDDD-6372 SW GEFAF Ave-HFDIE Rd-53969-FBAGDADJ]]>
+    </line>
+    <line>
+      <![CDATA[fnsaAGCCBGBHDDDD-lnsnAGCCBGBHDDDD-7146 W EEDGI Rd-FAABD Dr-82714-CFHDFJIB]]>
+    </line>
+    <line>
+      <![CDATA[SUMMER10-20% Off]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="45572" started-at="2016-06-22T22:33:33Z" finished-at="2016-06-22T22:34:18Z">
+    <groups>
+    </groups>
+    <test name="Test Chrome" duration-ms="45572" started-at="2016-06-22T22:33:33Z" finished-at="2016-06-22T22:34:18Z">
+      <class name="testLibrary.SmokeTestRemote">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="setup" is-config="true" duration-ms="2871" started-at="2016-06-22T17:33:33Z" finished-at="2016-06-22T17:33:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[large]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="beforeClass" is-config="true" duration-ms="5215" started-at="2016-06-22T17:33:36Z" finished-at="2016-06-22T17:33:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stg]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifyProductPrice()[pri:1, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="verifyProductPrice" duration-ms="5579" started-at="2016-06-22T17:33:41Z" description="Select seasonal product" finished-at="2016-06-22T17:33:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductPrice -->
+        <test-method status="PASS" signature="fillAccountForm()[pri:2, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="fillAccountForm" duration-ms="1287" started-at="2016-06-22T17:33:47Z" description="Fill the account data in the form" finished-at="2016-06-22T17:33:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Rob062216173333@mailinator.com-grqwe123]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- fillAccountForm -->
+        <test-method status="PASS" signature="fillPaymentForm()[pri:3, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="fillPaymentForm" duration-ms="768" started-at="2016-06-22T17:33:48Z" description="Fill the payment information in the form" finished-at="2016-06-22T17:33:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[371449635398431-10/2034]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- fillPaymentForm -->
+        <test-method status="PASS" signature="fillBillingForm()[pri:4, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="fillBillingForm" duration-ms="1771" started-at="2016-06-22T17:33:49Z" description="Fill the billing information in the form" finished-at="2016-06-22T17:33:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[fnxAGCCBGBHDDDD-O'connor xAGCCBGBHDDDD-6372 SW GEFAF Ave-HFDIE Rd-53969-FBAGDADJ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- fillBillingForm -->
+        <test-method status="PASS" signature="fillShippingForm()[pri:5, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="fillShippingForm" duration-ms="2869" started-at="2016-06-22T17:33:50Z" description="Fill the shipping information in the form " finished-at="2016-06-22T17:33:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[fnsaAGCCBGBHDDDD-lnsnAGCCBGBHDDDD-7146 W EEDGI Rd-FAABD Dr-82714-CFHDFJIB]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- fillShippingForm -->
+        <test-method status="PASS" signature="applyPromoCode()[pri:6, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="applyPromoCode" duration-ms="6209" started-at="2016-06-22T17:33:53Z" description="Apply promo code" finished-at="2016-06-22T17:33:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[SUMMER10-20% Off]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- applyPromoCode -->
+        <test-method status="FAIL" signature="completeTheOrder()[pri:7, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="completeTheOrder" duration-ms="18959" started-at="2016-06-22T17:33:59Z" description="Accept the terms and conditions and complete the order" finished-at="2016-06-22T17:34:18Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Timed out after 10 seconds. Unable to locate the element
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Unable to locate the element
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:89)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at poCheckout.Form.completeOrder(Form.java:402)
+	at testLibrary.SmokeTestRemote.completeTheOrder(SmokeTestRemote.java:144)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"edit-continue"}
+  (Session info: chrome=51.0.2704.103)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/.org.chromium.Chromium.Y9QSRV}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0ddbbda7e0cc3c13436112c100eb1027
+*** Element info: {Using=id, value=edit-continue}
+Command duration or timeout: 284 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/.org.chromium.Chromium.Y9QSRV}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=4f0ecec6-74a7-47ca-8206-1eb6c23b61eb, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4f0ecec6-74a7-47ca-8206-1eb6c23b61eb
+*** Element info: {Using=id, value=edit-continue}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$0(AjaxElementLocator.java:1)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:157)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:70)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:87)
+	... 28 more
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 38 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"edit-continue"}
+  (Session info: chrome=51.0.2704.103)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/.org.chromium.Chromium.Y9QSRV}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0ddbbda7e0cc3c13436112c100eb1027
+*** Element info: {Using=id, value=edit-continue}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.0.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.5', java.version: '1.8.0_91'
+Driver info: driver.version: EventFiringWebDriver
+	at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeTheOrder -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testLibrary.SmokeTestRemote@66a3ffec]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-06-22T17:34:18Z" finished-at="2016-06-22T17:34:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- testLibrary.SmokeTestRemote -->
+    </test> <!-- Test Chrome -->
+  </suite> <!-- Suite -->
+</testng-results>

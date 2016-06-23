@@ -1,0 +1,265 @@
+<html>
+<head>
+<title>TestNG:  Test Chrome</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test Chrome</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jun 06 21:12:50 COT 2016</td>
+</tr>
+<tr><td>Total time:</td><td>24 seconds (24891 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.beforeClass()'><b>beforeClass</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Parameters: stg</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 403 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=MAC, nativeEvents=false, elementScrollBehavior=1, acceptSslCerts=true, webdriver.remote.sessionid=cbcd9837-42cb-4648-92c9-7f751e859fa5, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: cbcd9837-42cb-4648-92c9-7f751e859fa5
+*** Element info: {Using=css selector, value=section.product-select}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$0(AjaxElementLocator.java:1)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:157)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:49)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:87)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at poCheckout.Product.&lt;init&gt;(Product.java:36)
+	at testLibrary.SmokeTestRemoteProd.beforeClass(SmokeTestRemoteProd.java:250)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 37 more
+Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+	at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+	at &lt;anonymous class&gt;.Resource.prototype.handle(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+	at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+	at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+	at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+	at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+	at &lt;anonymous class&gt;.Connection.prototype.process(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+	at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+	at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+	at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1946645411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1946645411'><pre>org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 403 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=MAC, nativeEvents=false, elementScrollBehavior=1, acceptSslCerts=true, webdriver.remote.sessionid=cbcd9837-42cb-4648-92c9-7f751e859fa5, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: cbcd9837-42cb-4648-92c9-7f751e859fa5
+*** Element info: {Using=css selector, value=section.product-select}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$0(AjaxElementLocator.java:1)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:157)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:49)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:87)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at poCheckout.Product.&lt;init&gt;(Product.java:36)
+	at testLibrary.SmokeTestRemoteProd.beforeClass(SmokeTestRemoteProd.java:250)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 37 more
+Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;MacBook-Pro-de-Juan.local&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+	at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+	at &lt;anonymous class&gt;.Resource.prototype.handle(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+	at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+	at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+	at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+	at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+	at &lt;anonymous class&gt;.Connection.prototype.process(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+	at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+	at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+	at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///var/folders/fv/b9qkx4vd1wz7t7gmly87p0s80000gn/T/anonymous6265581970985018701webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
+</pre></div></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.afterClass()'><b>afterClass</b><br>Test class: testLibrary.SmokeTestRemoteProd</td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.applyPromoCode()'><b>applyPromoCode</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Test method: Apply promo code</td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.fillAccountForm()'><b>fillAccountForm</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Test method: Fill the account data in the form</td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.fillBillingForm()'><b>fillBillingForm</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Test method: Fill the billing information in the form</td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.fillPaymentForm()'><b>fillPaymentForm</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Test method: Fill the payment information in the form</td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.fillShippingForm()'><b>fillShippingForm</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Test method: Fill the shipping information in the form </td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemoteProd.verifyProductPrice()'><b>verifyProductPrice</b><br>Test class: testLibrary.SmokeTestRemoteProd<br>Test method: Select seasonal product</td>
+<td></td>
+<td>0</td>
+<td>testLibrary.SmokeTestRemoteProd@5e025e70</td></tr>
+</table><p>
+</body>
+</html>

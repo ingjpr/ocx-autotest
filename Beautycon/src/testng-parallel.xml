@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  <test name="Test Chrome Large">
+  	<parameter name="env" value="stg"></parameter>
+  	<parameter name="browser" value="chrome"></parameter>
+  	<parameter name="size" value="large"></parameter>
+ 	<classes>
+    	<class name="testLibrary.SmokeTestRemote"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test Firefox large">
+  	<parameter name="env" value="stg"></parameter>
+  	<parameter name="browser" value="firefox"></parameter>
+  	<parameter name="size" value="large"></parameter>
+ 	<classes>
+    	<class name="testLibrary.SmokeTestRemote"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test Chrome Small">
+  	<parameter name="env" value="stg"></parameter>
+  	<parameter name="browser" value="chrome"></parameter>
+  	<parameter name="size" value="small"></parameter>
+ 	<classes>
+    	<class name="testLibrary.SmokeTestRemote"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test Firefox Small">
+  	<parameter name="env" value="stg"></parameter>
+  	<parameter name="browser" value="firefox"></parameter>
+  	<parameter name="size" value="small"></parameter>
+ 	<classes>
+    	<class name="testLibrary.SmokeTestRemote"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

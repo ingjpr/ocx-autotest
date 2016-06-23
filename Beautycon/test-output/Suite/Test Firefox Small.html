@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>TestNG:  Test Firefox Small</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test Firefox Small</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue May 31 15:58:00 COT 2016</td>
+</tr>
+<tr><td>Total time:</td><td>31 seconds (31932 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testLibrary.SmokeTestRemote.applyPromoCode()'><b>applyPromoCode</b><br>Test class: testLibrary.SmokeTestRemote<br>Test method: Apply promo code<br/>
+<a href="#Output-1961501712" onClick='toggleBox("Output-1961501712", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1961501712" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1961501712">
+SUMMER10-10% Off<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>testLibrary.SmokeTestRemote@57fffcd7</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemote.fillAccountForm()'><b>fillAccountForm</b><br>Test class: testLibrary.SmokeTestRemote<br>Test method: Fill the account data in the form<br/>
+<a href="#Output-780934299" onClick='toggleBox("Output-780934299", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-780934299" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-780934299">
+Robot053116155635@mailinator.com-grqwe123<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>testLibrary.SmokeTestRemote@57fffcd7</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemote.fillBillingForm()'><b>fillBillingForm</b><br>Test class: testLibrary.SmokeTestRemote<br>Test method: Fill the billing information in the form<br/>
+<a href="#Output-1265900909" onClick='toggleBox("Output-1265900909", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1265900909" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1265900909">
+fnfAFDBBGBFFGDF-lnjAFDBBGBFFGDF-4499 NE EFFBI Pt-BDFHF Rd-94102-GJFAECJD<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testLibrary.SmokeTestRemote@57fffcd7</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemote.fillPaymentForm()'><b>fillPaymentForm</b><br>Test class: testLibrary.SmokeTestRemote<br>Test method: Fill the payment information in the form<br/>
+<a href="#Output-1150963491" onClick='toggleBox("Output-1150963491", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1150963491" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1150963491">
+4111111111111111-05/2021<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>testLibrary.SmokeTestRemote@57fffcd7</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemote.fillShippingForm()'><b>fillShippingForm</b><br>Test class: testLibrary.SmokeTestRemote<br>Test method: Fill the shipping information in the form <br/>
+<a href="#Output-389993238" onClick='toggleBox("Output-389993238", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-389993238" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-389993238">
+fnsqAFDBBGBFFGDF-lnsvAFDBBGBFFGDF-8281 SW BIGCH Blvd-ICGDG Blvd-94102-DHDBFECA<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>testLibrary.SmokeTestRemote@57fffcd7</td></tr>
+<tr>
+<td title='testLibrary.SmokeTestRemote.verifyProductPrice()'><b>verifyProductPrice</b><br>Test class: testLibrary.SmokeTestRemote<br>Test method: Select seasonal product</td>
+<td></td>
+<td>6</td>
+<td>testLibrary.SmokeTestRemote@57fffcd7</td></tr>
+</table><p>
+</body>
+</html>

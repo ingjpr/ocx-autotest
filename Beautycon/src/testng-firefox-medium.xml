@@ -4,9 +4,9 @@
   <parameter name="browser" value="chrome"></parameter>
   <parameter name="size" value="large"></parameter>
  	 <test name="Test Chrome">
-    	<parameter name="env" value="stg"></parameter>
+    	<parameter name="env" value="prd"></parameter>
     	<classes>
-    	   	<class name="testLibrary.SmokeTestRemote"/>
+    	   	<class name="testLibrary.SmokeTestRemoteProd"/>
     	</classes>
   	</test> <!-- Test -->
 </suite> <!-- Suite -->

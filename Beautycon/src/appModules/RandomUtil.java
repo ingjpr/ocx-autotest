@@ -229,11 +229,12 @@ public class RandomUtil {
 	 */
 	public static String[] pick_promocode(){
 		Map<String, String> product_code = new HashMap<String, String>();
-		product_code.put("SUMMER50", "50");
+		//product_code.put("SUMMER50", "50");
+		product_code.put("SUMMERPEACELOVE", "5");
 		product_code.put("SUMMER20", "20");
-		product_code.put("SUMMER10", "10");
-		product_code.put("SUMMERKMONEY", "5");
-		product_code.put("BCSUMMER", "Free shipping");
+		product_code.put("KANDEE10", "10");
+		//product_code.put("SUMMERKMONEY", "5");
+		//product_code.put("BCSUMMER", "Free shipping");
 				
 		Random			random    = new Random();
 		List<String> 	keys      = new ArrayList<String>(product_code.keySet());

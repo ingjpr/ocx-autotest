@@ -30,6 +30,9 @@ public class OrderSummary {
 	@FindBy(how = How.ID, using = "edit-oceanx-coupons-pane-coupons-form-submit")
 	private static WebElement buttonPromoCode;
 	
+	@FindBy(how = How.ID, using = "edit-account-coupon-error")
+	private static WebElement messageInvalidCode;
+	
 	@FindBy(how = How.CSS, using = "div#edit-oceanx-coupons-pane-coupons-form>p>div")
 	private static WebElement messageValidCode;
 	
@@ -89,10 +92,13 @@ public class OrderSummary {
 	 * @return
 	 */
 	public OrderSummary applyPromoCode(String promocode){
-		inputPromoCode.click();
-		inputPromoCode.sendKeys(promocode);
-		buttonPromoCode.click();
-		Waits.wait_visible(messageValidCode, driver, 5);
+		if(promocode.equalsIgnoreCase("")){
+			inputPromoCode.clear();
+		}else{
+			inputPromoCode.click();
+			inputPromoCode.sendKeys(promocode);
+			buttonPromoCode.click();
+		}
 		return this;
 	}
 	
@@ -103,6 +109,15 @@ public class OrderSummary {
 	public String readPromoCodeText(){
 		Waits.wait_visible(messageValidCode, driver, 5);
 		return messageValidCode.getText();
+	}
+	
+	/**
+	 * Read the promocode ERROR message, it only will be visible if code is not valid
+	 * @return String with message
+	 */
+	public String readPromoCodeError(){
+		Waits.wait_visible(messageInvalidCode, driver, 5);
+		return messageInvalidCode.getText();
 	}
 	
 }

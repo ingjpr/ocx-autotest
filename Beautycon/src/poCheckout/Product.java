@@ -27,6 +27,13 @@ public class Product {
 	
 	@FindBy(how = How.CSS, using = "section.product-select")
 	private static WebElement areaProduct;
+	
+	@FindBy(how = How.CSS, using = "div#sas_pdp_11>div:nth-child(2)>span")
+	private static WebElement textAnnual;
+	
+	@FindBy(how = How.CSS, using = "div#sas_pdp_6>div:nth-child(2)>span")
+	private static WebElement textSeasonal;
+	
 		
 	/**Constructor*/
 	public Product(WebDriver driver) {	 
@@ -37,7 +44,30 @@ public class Product {
             throw new IllegalStateException("This page does not contain the Product Area");
         }
 	}
-
+	
+	/**
+	 * Select annual
+	 * @return
+	 */
+	public Product selectAnnual(){
+		Waits.wait_clickable(buttonAnnual, driver, 5);
+		buttonAnnual.click();
+		Waits.wait_for_a_bit(5000);
+		return this;
+	}
+	
+	/**
+	 * Select seasonal
+	 * @return
+	 */
+	public Product selectSeasonal(){
+		Waits.wait_clickable(buttonSeasonal, driver, 5);
+		buttonSeasonal.click();
+		Waits.wait_for_a_bit(5000);
+		return this;
+	}
+	
+	
 	/**
 	 * Select a product based on desired by the tester 
 	 * @param product : Annual or Seasonal
@@ -46,17 +76,44 @@ public class Product {
 	public Product selectAProduct(String product){
 		switch (product){
 		case "Annual": 	
-			Waits.wait_clickable(buttonAnnual, driver, 5);
-			buttonAnnual.click();
-			Waits.wait_for_a_bit(5000);
+			selectAnnual();
 			break;
 		case "Seasonal": 
-			Waits.wait_clickable(buttonSeasonal, driver, 5);
-			buttonSeasonal.click();
-			Waits.wait_for_a_bit(5000);
+			selectSeasonal();
 			break;
 		}
 		return this;
+	}
+	
+	/**
+	 * Change the product
+	 * @return
+	 */
+	public Product switchProduct(){
+		String annual = buttonAnnual.getAttribute("class");
+		String seasonal = buttonSeasonal.getAttribute("class");
+		if(annual.contains("selected")){
+			selectSeasonal();
+		}else if(seasonal.contains("selected")){
+			selectAnnual();
+		}
+		return this;
+	}
+	
+	/**
+	 * Get value of selected the product
+	 * @return
+	 */
+	public String getValueSelectedProduct(){
+		String annual = buttonAnnual.getAttribute("class");
+		String seasonal = buttonSeasonal.getAttribute("class");
+		String value = "";
+		if(annual.contains("selected")){
+			value = textAnnual.getText();
+		}else if(seasonal.contains("selected")){
+			value = textSeasonal.getText();
+		}
+		return value;
 	}
 	
 }

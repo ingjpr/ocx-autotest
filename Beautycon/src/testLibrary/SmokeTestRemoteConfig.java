@@ -10,6 +10,10 @@ import poCheckout.Product;
 
 
 import org.testng.annotations.Test;
+
+import appModules.OrderPojo;
+import appModules.ScreenShots;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -20,6 +24,7 @@ import org.testng.Reporter;
 
 public class SmokeTestRemoteConfig {
 	WebDriver driver;
+	OrderPojo order = new OrderPojo("", "", "", "", "", "", "");
 	
 
 	/**POM Involved**/
@@ -41,7 +46,7 @@ public class SmokeTestRemoteConfig {
 	String[] exp = appModules.RandomUtil.generate_expiration_date();
 				
 	String firstname = "fn"+appModules.RandomUtil.generate_unique_text();
-	String lastname = "O'connor "+appModules.RandomUtil.generate_unique_text();
+	String lastname = "ln"+appModules.RandomUtil.generate_unique_text();
 	String address1 = appModules.RandomUtil.generate_address("address1");
 	String address2 = appModules.RandomUtil.generate_address("address2");
 	String[] zip = appModules.RandomUtil.pick_random_zip();
@@ -64,7 +69,7 @@ public class SmokeTestRemoteConfig {
 	String shipping;
 	String total;
 	
-	@Test (description = "Switch the product", enabled = false, priority = 0)
+	@Test (description = "Switch the product", enabled = true, priority = 0)
 	public void switchProductFromDeafult() {
 		String original = product.getValueSelectedProduct();
 		product.switchProduct();
@@ -77,7 +82,7 @@ public class SmokeTestRemoteConfig {
 		Assert.assertTrue(original.equalsIgnoreCase(selected_b), "Product did not change TO default");
 	}
 	
-	@Test (description = "Select seasonal product", enabled = false, priority = 1)
+	@Test (description = "Select seasonal product", enabled = true, priority = 1)
 	public void verifyProductPrice() {
 		System.out.println(product.getValueSelectedProduct());
 		if(seasonalvalue.contains(product.getValueSelectedProduct())){
@@ -91,31 +96,36 @@ public class SmokeTestRemoteConfig {
 		Assert.assertTrue(priceselected.equalsIgnoreCase(seasonalvalue), "Price Not Matching, expected: "+seasonalvalue+" Obtained: "+priceselected);
 	}
 	
-	@Test (description="Fill the account data in the form",enabled = false, priority = 2)
+	@Test (description="Fill the account data in the form",enabled = true, priority = 2)
 	public void fillAccountForm() {
 		form.fillForm(email, pwd, pwdconfirm, phone, age);
+		order.setEmail(email);
 		Reporter.log(email+"-"+pwd);
 	}
 	
-	@Test (description="Fill the payment information in the form",enabled = false, priority = 3)
+	@Test (description="Fill the payment information in the form",enabled = true, priority = 3)
 	public void fillPaymentForm() {
 		form.fillCC(cc[1]);
 		form.fillExpirationDate(exp[0],exp[1]);
+		order.setCC(cc[1]);
 		Reporter.log(cc[1]+"-"+exp[0]+"/"+exp[1]);
 	}
 	
-	@Test (description="Fill the billing information in the form", enabled = false, priority = 4)
+	@Test (description="Fill the billing information in the form", enabled = true, priority = 4)
 	public void fillBillingForm() {
 		form.fillFirstNameB(firstname);
 		form.fillLastNameB(lastname);
 		form.fillAddress1B(address1);
 		form.fillAddress2B(address2);
 		form.fillZipB(zip[0]);
+		//form.fillZipB("00060");
 		form.fillCityB(city);
+		order.setFirstnamel(firstname);
+		order.setLastname(lastname);
 		Reporter.log(firstname+"-"+lastname+"-"+address1+"-"+address2+"-"+zip[0]+"-"+city);
 	}
 	
-	@Test (description="Fill the shipping information in the form ",enabled = false, priority = 5)
+	@Test (description="Fill the shipping information in the form ",enabled = true, priority = 5)
 	public void fillShippingForm() {
 		form.clickOnShipping();
 		form.fillFirstNameS(firstname_s);
@@ -123,6 +133,7 @@ public class SmokeTestRemoteConfig {
 		form.fillAddress1S(address1_s);
 		form.fillAddress2S(address2_s);
 		form.fillZipS(zip_s[0]);
+		//form.fillZipS("00481");
 		form.fillCityS(city_s);
 		Reporter.log(firstname_s+"-"+lastname_s+"-"+address1_s+"-"+address2_s+"-"+zip_s[0]+"-"+city_s);
 	}
@@ -154,18 +165,37 @@ public class SmokeTestRemoteConfig {
 		Assert.assertTrue(Float.valueOf(total) > Float.valueOf(total_changed), "Price did not decrease after promo code applied");
 	}
 	
-	@Test (description="Accept the terms and conditions and complete the order",enabled = false, priority = 8)
-	public void completeTheOrder() {
+	@Test (description="Accept the terms and conditions and complete the order",enabled = true, priority = 8)
+	@Parameters({"env"})
+	public void completeTheOrder(String env) {
 		subtotal = orderSummary.getSummaryValuesMap().get("Subtotal");
 		shipping = orderSummary.getSummaryValuesMap().get("Shipping");
 		total = orderSummary.getSummaryValuesMap().get("Total");
 		form.clickOnTerms();
-		complete = form.completeOrder();
-		/*Added to test duplicated orders it will fail this TEST*/
-		complete = form.completeOrder();
+		if(env.equalsIgnoreCase("prd")){
+			form.completeOrderFailed();
+			form.fillPassword(pwd);
+			form.fillPasswordConfirm(pwdconfirm);
+		}
 		complete = form.completeOrder();
 		String subtotal_completed = complete.getSummaryValuesMap().get("Subtotal");
+		String shipping_completed = complete.getSummaryValuesMap().get("Shipping");
+		String total_completed = complete.getSummaryValuesMap().get("Order Total");
+		String order_number = complete.getSummaryValuesMap().get("Order Number");
+		String product_complete = complete.getProductValue().toLowerCase();
+		order.setProduct(product_complete);
+		order.setOrdernumber(order_number);
+		order.setTotal(total_completed);
+		Reporter.log("Product"+"-"+product_complete);
+		Reporter.log("Subtotal"+"-"+subtotal_completed);
+		Reporter.log("Shipping"+"-"+shipping_completed);
+		Reporter.log("Total"+"-"+total_completed);
+		Reporter.log("Order Number"+"-"+order_number);
 		Assert.assertEquals(subtotal_completed, subtotal, "Expected:"+subtotal+" Obtained:"+subtotal_completed);
+		Assert.assertEquals(shipping_completed, shipping, "Expected:"+subtotal+" Obtained:"+shipping_completed);
+		Assert.assertEquals(total_completed, total, "Expected:"+subtotal+" Obtained:"+total_completed);
+		Assert.assertTrue(product_complete.contains("seasonal"), "Expected: Seasonal, Obtained:"+total_completed);
+		ScreenShots.take_screenshot(driver);
 	}
 	
 	@BeforeTest
@@ -180,7 +210,7 @@ public class SmokeTestRemoteConfig {
 		/*Setup the environment*/
 		String URL = "";
 		URL = appModules.Config.environment(env, driver);
-		
+				
 		/*Open the page*/
 		driver.get(URL);
 		driver.get(driver.getCurrentUrl());

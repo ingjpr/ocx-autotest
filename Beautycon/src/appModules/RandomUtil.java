@@ -174,6 +174,9 @@ public class RandomUtil {
 		zip_state.put("33178", "Florida");
 		zip_state.put("53969", "Wisconsin");
 		zip_state.put("82714", "Wyoming");
+		zip_state.put("00830", "Virgin Islands");
+		zip_state.put("34090", "Armed Forces (Americas)");
+		zip_state.put("96910", "Guam");
 		
 		Random       random    = new Random();
 		List<String> keys      = new ArrayList<String>(zip_state.keySet());

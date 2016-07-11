@@ -38,8 +38,8 @@ public class Product {
 	/**Constructor*/
 	public Product(WebDriver driver) {	 
 		this.driver = driver;
-		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
-		Waits.wait_visible(areaProduct, driver, 10);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 12), this);
+		Waits.wait_visible(areaProduct, driver, 12);
 		if (!areaProduct.isDisplayed()) {
             throw new IllegalStateException("This page does not contain the Product Area");
         }
@@ -50,7 +50,7 @@ public class Product {
 	 * @return
 	 */
 	public Product selectAnnual(){
-		Waits.wait_clickable(buttonAnnual, driver, 5);
+		Waits.wait_clickable(buttonAnnual, driver, 6);
 		buttonAnnual.click();
 		Waits.wait_for_a_bit(5000);
 		return this;
@@ -61,7 +61,7 @@ public class Product {
 	 * @return
 	 */
 	public Product selectSeasonal(){
-		Waits.wait_clickable(buttonSeasonal, driver, 5);
+		Waits.wait_clickable(buttonSeasonal, driver, 6);
 		buttonSeasonal.click();
 		Waits.wait_for_a_bit(5000);
 		return this;

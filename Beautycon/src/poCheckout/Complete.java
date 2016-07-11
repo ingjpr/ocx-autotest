@@ -42,6 +42,10 @@ public class Complete {
 	@FindAll({@FindBy(how = How.CSS, using = "div.order-summary-item > ul > li:nth-child(n)")})
 	private static List<WebElement> textsOrderSummaryPrice;
 	
+	@FindBy(how = How.CSS, using = ".kit-title")
+	private static WebElement textProduct;
+	
+	
 	/*
 	ul.shipment-total-summary>li:nth-child(1)>p>span:nth-child(2)
 	
@@ -78,6 +82,10 @@ public class Complete {
 			values.put(txt_array[0],txt_array[1]);
 		}
 		return values;
+	}
+	
+	public String getProductValue(){
+		return textProduct.getText();
 	}
 	
 }
